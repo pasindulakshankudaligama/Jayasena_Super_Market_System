@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="manageItemsContext" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #95a5a6;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemsFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="167.0" layoutY="24.0" prefHeight="40.0" prefWidth="667.0" text="Jayasena Super Market" textFill="#7cff85">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtItemCode" layoutX="32.0" layoutY="110.0" onAction="#moveDescription" prefHeight="24.0" prefWidth="142.0" promptText="Item Code">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDescription" layoutX="183.0" layoutY="110.0" onAction="#movePacketSize" prefHeight="29.0" prefWidth="214.0" promptText="Description">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPacketSize" layoutX="406.0" layoutY="110.0" onAction="#moveUnitPrice" prefHeight="29.0" prefWidth="163.0" promptText="Packet Size">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtUnitPrice" layoutX="578.0" layoutY="110.0" onAction="#moveQtyOnHand" promptText="Unit Price">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtQtyOnHand" layoutX="782.0" layoutY="110.0" onAction="#moveDiscount" promptText="qty on hand">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnAddItem" layoutX="870.0" layoutY="163.0" mnemonicParsing="false" onAction="#addItemOnAction" style="-fx-background-color: #3498db;" text="Add Item">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClearFeild" layoutX="722.0" layoutY="163.0" mnemonicParsing="false" onAction="#clearFeildOnAction" style="-fx-background-color: #3498db;" text="Clear Feild">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEdit" layoutX="640.0" layoutY="163.0" mnemonicParsing="false" onAction="#btnEditAndUpdate" style="-fx-background-color: #3498db;" text="Edit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="895.0" layoutY="31.0" mnemonicParsing="false" onAction="#backLogInForm" style="-fx-background-color: #e74c3c;" text="Logout">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="32.0" layoutY="31.0" mnemonicParsing="false" onAction="#backReportsAndManageItemsForm" style="-fx-background-color: #e74c3c;" text="Back">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblAddItem" layoutX="23.0" layoutY="209.0" onMouseClicked="#handleMouseOnAction" prefHeight="439.0" prefWidth="954.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="120.0" text="Item Code" />
+          <TableColumn fx:id="colDescription" prefWidth="194.0" text="Description" />
+            <TableColumn fx:id="colPacketSize" prefWidth="143.0" text="Packet Size" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="159.0" text="Unit Price" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="171.0" text="qty on hand" />
+            <TableColumn fx:id="colDiscount" prefWidth="176.0" text="Discount" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnDeleteItem" layoutX="856.0" layoutY="653.0" mnemonicParsing="false" onAction="#deleteItemOnAction" style="-fx-background-color: #e74c3c;" text="Delete Item">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtDiscount" layoutX="422.0" layoutY="165.0" promptText="Discount">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

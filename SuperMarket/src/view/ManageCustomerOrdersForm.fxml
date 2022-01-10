@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="534.0" prefWidth="891.0" style="-fx-background-color: #95a5a6;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerOrdersFormController">
+   <children>
+      <TextField fx:id="txtSearch" layoutX="272.0" layoutY="24.0" promptText="Search" />
+      <Button layoutX="467.0" layoutY="24.0" mnemonicParsing="false" onAction="#searchOnAction" style="-fx-background-color: #3498db;" text="Search Customer" />
+      <TableView fx:id="tblGetDetails" layoutX="173.0" layoutY="67.0" onMouseClicked="#addDataOnAction" prefHeight="298.0" prefWidth="679.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="161.0" />
+          <TableColumn fx:id="colOrderId" prefWidth="188.0" text="Order Id" />
+            <TableColumn fx:id="colQty" prefWidth="149.0" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="174.0" text="Unit Price" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtItemCode" layoutX="173.0" layoutY="389.0" promptText="Item Code" />
+      <TextField fx:id="txtQty" layoutX="382.0" layoutY="389.0" promptText="Qty" />
+      <Button fx:id="btnCancelContext" layoutX="369.0" layoutY="482.0" mnemonicParsing="false" onAction="#cancelOrderOnAction" style="-fx-background-color: #e74c3c;" text="Cancel" />
+      <Button layoutX="476.0" layoutY="477.0" mnemonicParsing="false" onAction="#btnConfrimEditOnAction" style="-fx-background-color: #3498db;" text="Edit Order">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <ComboBox fx:id="cmbOrderId" layoutX="14.0" layoutY="55.0" prefWidth="150.0" promptText="Order Id" style="-fx-background-color: #3498db;" />
+      <TextField fx:id="txtUnitPrice" layoutX="620.0" layoutY="389.0" promptText="unit Price" />
+      <TextField fx:id="txtOrderId" layoutX="173.0" layoutY="433.0" promptText="Order Id" />
+   </children>
+</AnchorPane>
